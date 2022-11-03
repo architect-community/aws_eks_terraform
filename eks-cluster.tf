@@ -21,11 +21,11 @@ module "eks" {
     one = {
       name = "node-group-1"
 
-      instance_types = ["t2.micro"]
+      instance_types = ["t2.medium"]
 
-      min_size     = 1
-      max_size     = 2
-      desired_size = 2
+      min_size     = 3
+      max_size     = 5
+      desired_size = 3
 
       pre_bootstrap_user_data = <<-EOT
       echo 'forty-two'
